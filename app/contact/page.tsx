@@ -131,11 +131,11 @@ export default function ContactPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle>Let's Collaborate</CardTitle>
+              <CardTitle>Let&apos;s Collaborate</CardTitle>
               <CardDescription>
-                I'm currently looking for internship opportunities and interesting projects to work on.
+                I&apos;m currently looking for internship opportunities and interesting projects to work on.
                 Whether you have a job opportunity, project idea, or just want to chat about technology,
-                I'd love to hear from you!
+                I&apos;d love to hear from you!
               </CardDescription>
             </CardHeader>
           </Card>
@@ -151,7 +151,7 @@ export default function ContactPage() {
             <CardHeader>
               <CardTitle>Send a Message</CardTitle>
               <CardDescription>
-                Fill out the form below and I'll get back to you as soon as possible.
+                Fill out the form below and I&apos;ll get back to you as soon as possible.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -164,7 +164,7 @@ export default function ContactPage() {
                   <CheckCircle className="h-12 w-12 text-green-500 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold mb-2">Message Sent!</h3>
                   <p className="text-muted-foreground">
-                    Thank you for reaching out. I'll get back to you soon!
+                    Thank you for reaching out. I&apos;ll get back to you soon!
                   </p>
                 </motion.div>
               ) : (
