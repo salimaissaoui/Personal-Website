@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { UrlObject } from "url";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle } from "lucide-react";
 
@@ -42,7 +41,7 @@ export default function ContactPage() {
     icon: any;
     label: string;
     value: string;
-    href?: string | UrlObject;
+    href?: string;
   }> = [
     {
       icon: Mail,
@@ -102,7 +101,7 @@ export default function ContactPage() {
                     <p className="text-sm font-medium">{method.label}</p>
                     {method.href ? (
                       <Link
-                        href={method.href}
+                        href={method.href as any}
                         className="text-sm text-muted-foreground hover:text-primary transition-colors"
                       >
                         {method.value}
