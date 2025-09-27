@@ -97,7 +97,7 @@ export default function ContactPage() {
                     <p className="text-sm font-medium">{method.label}</p>
                     {method.href ? (
                       <Link
-                        href={method.href}
+                        href={method.href as string}
                         className="text-sm text-muted-foreground hover:text-primary transition-colors"
                       >
                         {method.value}
