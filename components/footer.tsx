@@ -57,7 +57,7 @@ export function Footer() {
               {socialLinks.map((link) => (
                 <Link
                   key={link.name}
-                  href={link.href}
+                  href={link.href as any}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"

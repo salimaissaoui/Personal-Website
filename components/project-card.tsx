@@ -60,7 +60,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           <div className="flex gap-2 mt-4">
             {project.githubUrl && (
               <Button variant="outline" size="sm" asChild>
-                <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                <Link href={project.githubUrl as any} target="_blank" rel="noopener noreferrer">
                   <Github className="h-4 w-4 mr-2" />
                   Code
                 </Link>
@@ -68,7 +68,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             )}
             {project.liveUrl && (
               <Button size="sm" asChild>
-                <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                <Link href={project.liveUrl as any} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="h-4 w-4 mr-2" />
                   Live Demo
                 </Link>

@@ -42,7 +42,7 @@ export function Header() {
           {navigation.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={item.href as any}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary relative",
                 pathname === item.href
@@ -81,7 +81,7 @@ export function Header() {
                 {navigation.map((item) => (
                   <Link
                     key={item.href}
-                    href={item.href}
+                    href={item.href as any}
                     onClick={() => setIsOpen(false)}
                     className={cn(
                       "text-sm font-medium transition-colors hover:text-primary",
