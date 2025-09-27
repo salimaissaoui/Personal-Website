@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
@@ -11,7 +11,7 @@ import { projects, ProjectTag } from "@/data/projects";
 
 const allTags: ProjectTag[] = ["ML", "Backend", "Frontend", "Cloud", "Systems", "Mobile"];
 
-export default function ProjectsPage() {
+function ProjectsContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [selectedTags, setSelectedTags] = useState<ProjectTag[]>([]);
@@ -103,5 +103,13 @@ export default function ProjectsPage() {
         </motion.div>
       )}
     </div>
+  );
+}
+
+export default function ProjectsPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProjectsContent />
+    </Suspense>
   );
 }
