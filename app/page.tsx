@@ -38,7 +38,7 @@ export default function HomePage() {
 
           <div className="mt-8 flex items-center justify-center gap-6">
             <Link
-              href={contactInfo.github}
+              href={contactInfo.github as any}
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -47,7 +47,7 @@ export default function HomePage() {
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
-              href={contactInfo.linkedin}
+              href={contactInfo.linkedin as any}
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -56,7 +56,7 @@ export default function HomePage() {
               <span className="sr-only">LinkedIn</span>
             </Link>
             <Link
-              href={`mailto:${contactInfo.email}`}
+              href={`mailto:${contactInfo.email}` as any}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail className="h-6 w-6" />
