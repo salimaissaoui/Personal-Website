@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { UrlObject } from "url";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle } from "lucide-react";
 
@@ -41,7 +42,7 @@ export default function ContactPage() {
     icon: any;
     label: string;
     value: string;
-    href?: string;
+    href?: string | UrlObject;
   }> = [
     {
       icon: Mail,
