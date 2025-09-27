@@ -121,7 +121,7 @@ export default function ContactPage() {
               {socialLinks.map((link) => (
                 <Link
                   key={link.label}
-                  href={link.href}
+                  href={link.href as any}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-10 h-10 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
