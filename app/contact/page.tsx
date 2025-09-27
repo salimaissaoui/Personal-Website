@@ -37,7 +37,12 @@ export default function ContactPage() {
     }, 1000);
   };
 
-  const contactMethods = [
+  const contactMethods: Array<{
+    icon: any;
+    label: string;
+    value: string;
+    href?: string;
+  }> = [
     {
       icon: Mail,
       label: "Email",
@@ -54,7 +59,6 @@ export default function ContactPage() {
       icon: MapPin,
       label: "Location",
       value: contactInfo.location,
-      href: null,
     },
   ];
 
@@ -97,7 +101,7 @@ export default function ContactPage() {
                     <p className="text-sm font-medium">{method.label}</p>
                     {method.href ? (
                       <Link
-                        href={method.href as string}
+                        href={method.href}
                         className="text-sm text-muted-foreground hover:text-primary transition-colors"
                       >
                         {method.value}
